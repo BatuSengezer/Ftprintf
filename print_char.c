@@ -34,5 +34,10 @@ void    print_char(t_flags *flag, va_list args)
 
 int main(void)
 {
-    print_char('%', 55);
+	t_flags flag;
+
+	ft_bzero(&flag, sizeof(t_flags)); // initialize flag struct
+	flag.ptr = "Hello, %c!"; // set format string
+	ft_printf(flag.ptr, 'W'); // call ft_printf with a character argument
+	return (0);
 }

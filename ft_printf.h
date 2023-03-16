@@ -14,7 +14,9 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include "./libft/libft.h"
+# include "../libft/libft.h"
+
+# define ERROR		-1
 
 typedef struct s_flags
 {
@@ -25,5 +27,8 @@ typedef struct s_flags
 	int		precision;
 	int		zero_padding;
 }	t_flags;
+
+
+int			ft_printf(const char *str, ...);
 
 #endif
