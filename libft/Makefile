@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bsengeze <bsengeze@student.42.fr>          +#+  +:+       +#+         #
+#    By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 16:30:24 by bsengeze          #+#    #+#              #
-#    Updated: 2022/12/24 19:57:03 by bsengeze         ###   ########.fr        #
+#    Updated: 2023/03/20 03:12:27 by bsengeze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,12 +53,13 @@ SRCS = 	ft_isalpha.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_putchar.c
+		ft_putchar.c \
+		ft_putstr.c
 
 OBJS = $(SRCS:.c=.o)
 
 all:	$(NAME)
-		@echo "make is done"
+		@echo libft all is done
 
 #SRC files are not included to not double define(they are already defd in HDRS)
 #It is impossible to double define. Header prototypes the function for compiler
@@ -69,10 +70,16 @@ $(NAME):	$(OBJS) $(HDRS)
 
 clean:
 		$(RM) $(OBJS)
+		@echo libft clean is done
+
 
 fclean:	clean
 		$(RM) $(NAME)	
+		@echo libft fclean is done
+
 
 re:	fclean all
+		@echo libft re is done
+
 
 .PHONY: all clean fclean re
