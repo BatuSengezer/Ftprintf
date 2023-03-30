@@ -1,7 +1,0 @@
-While adding functions update source libft then copy it to printf.
-change putchar to in source and headerfile:
-
-void ft_putchar(int c)
-{
-	write(1, &c, 1);
-}
